@@ -1,6 +1,6 @@
-# 🎵 Guía Completa de la Aplicación - Música API Manager
+#  Guía Completa de la Aplicación - Música API Manager
 
-## 📋 Índice
+##  Índice
 1. [Inicio Rápido](#inicio-rápido)
 2. [Funcionalidades](#funcionalidades)
 3. [Uso de la Aplicación](#uso-de-la-aplicación)
@@ -8,7 +8,7 @@
 
 ---
 
-## 🚀 Inicio Rápido
+## Inicio Rápido
 
 ### Iniciar el Servidor
 ```bash
@@ -30,11 +30,11 @@ Abre tu navegador en: **http://localhost:3000**
 
 ---
 
-## ✨ Funcionalidades
+##  Funcionalidades
 
-### 🔐 1. Autenticación y Autorización
+### 1. Autenticación y Autorización
 
-#### ✅ Características
+####  Características
 - **Login**: Iniciar sesión con email y contraseña
 - **Registro**: Crear nueva cuenta de usuario
 - **Logout**: Cerrar sesión de forma segura
@@ -42,7 +42,7 @@ Abre tu navegador en: **http://localhost:3000**
 - **Protección**: Todas las páginas requieren autenticación
 - **Redirección**: Si no estás autenticado, te redirige a login
 
-#### 🎨 UI de Usuario
+####  UI de Usuario
 - Avatar con iniciales en el sidebar
 - Nombre y email del usuario
 - Botón de cerrar sesión
@@ -51,9 +51,9 @@ Abre tu navegador en: **http://localhost:3000**
 
 ---
 
-### 🎵 2. Reproductor de Música
+###  2. Reproductor de Música
 
-#### ✅ Características
+####  Características
 - **Reproducción**: Play/Pause de canciones
 - **Navegación**: Siguiente/Anterior canción
 - **Progreso**: Barra de progreso interactiva
@@ -62,7 +62,7 @@ Abre tu navegador en: **http://localhost:3000**
 - **Queue**: Sistema de cola de reproducción
 - **Fijo**: Reproductor fijo en la parte inferior
 
-#### 🎮 Cómo Usar
+#### Cómo Usar
 1. Ve a **Canciones**
 2. Haz clic en el botón ▶️ de cualquier canción
 3. El reproductor aparece en la parte inferior
@@ -71,9 +71,9 @@ Abre tu navegador en: **http://localhost:3000**
 
 ---
 
-### 📊 3. Dashboard
+###  3. Dashboard
 
-#### ✅ Estadísticas en Tiempo Real
+####  Estadísticas en Tiempo Real
 - **Total Usuarios**: Cantidad de usuarios registrados
 - **Total Canciones**: Canciones en la biblioteca
 - **Total Favoritos**: Marcadores de favoritos
@@ -81,9 +81,9 @@ Abre tu navegador en: **http://localhost:3000**
 
 ---
 
-### 🎼 4. Gestión de Canciones
+###  4. Gestión de Canciones
 
-#### ✅ Funcionalidades
+####  Funcionalidades
 - **Listar**: Ver todas las canciones con paginación
 - **Crear**: Agregar nuevas canciones
 - **Editar**: Modificar información de canciones
@@ -91,7 +91,7 @@ Abre tu navegador en: **http://localhost:3000**
 - **Buscar**: Buscar por título
 - **Reproducir**: Play directo desde la tabla
 
-#### 📝 Campos
+####  Campos
 - Título (requerido)
 - Artista
 - Álbum
@@ -102,30 +102,30 @@ Abre tu navegador en: **http://localhost:3000**
 
 ---
 
-### 👥 5. Gestión de Usuarios
+### 5. Gestión de Usuarios
 
-#### ✅ Funcionalidades
+#### Funcionalidades
 - **Listar**: Ver todos los usuarios
 - **Crear**: Agregar nuevos usuarios
 - **Editar**: Modificar información
 - **Eliminar**: Borrar usuarios
 - **Fecha de Registro**: Timestamp de creación
 
-#### 📝 Campos
+####  Campos
 - Nombre completo (requerido)
 - Correo electrónico (requerido, único)
 
 ---
 
-### ❤️ 6. Gestión de Favoritos
+###  6. Gestión de Favoritos
 
-#### ✅ Funcionalidades
+#### Funcionalidades
 - **Ver por Usuario**: Seleccionar usuario y ver sus favoritos
 - **Agregar**: Marcar canciones como favoritas
 - **Eliminar**: Quitar de favoritos
 - **Detalles**: Ver información completa de cada canción favorita
 
-#### 🎯 Información Mostrada
+####  Información Mostrada
 - Canción (título y artista)
 - Álbum
 - Duración
@@ -133,9 +133,9 @@ Abre tu navegador en: **http://localhost:3000**
 
 ---
 
-### 🌓 7. Tema Claro/Oscuro
+### 7. Tema Claro/Oscuro
 
-#### ✅ Características
+####  Características
 - **Toggle**: Botón en el header del sidebar
 - **Persistencia**: Se guarda la preferencia
 - **Sistema**: Puede seguir el tema del sistema
@@ -143,18 +143,17 @@ Abre tu navegador en: **http://localhost:3000**
 
 ---
 
-## 🎯 Uso de la Aplicación
+##  Uso de la Aplicación
 
 ### Flujo Completo
 
-#### 1️⃣ Autenticación
+#### 1️ Autenticación
 ```
 1. Abrir http://localhost:3000
 2. Registrarse o iniciar sesión
 3. Ser redirigido al Dashboard
 ```
-
-#### 2️⃣ Explorar Música
+#### 2️ Explorar Música
 ```
 1. Ir a "Canciones"
 2. Ver la lista de canciones
@@ -162,7 +161,7 @@ Abre tu navegador en: **http://localhost:3000**
 4. Crear una nueva canción con "Nueva"
 ```
 
-#### 3️⃣ Reproducir
+#### 3️ Reproducir
 ```
 1. Hacer clic en ▶️ en cualquier canción
 2. Ver el reproductor aparecer abajo
@@ -170,7 +169,7 @@ Abre tu navegador en: **http://localhost:3000**
 4. Ajustar volumen y progreso
 ```
 
-#### 4️⃣ Gestionar Favoritos
+#### 4️ Gestionar Favoritos
 ```
 1. Ir a "Favoritos"
 2. Seleccionar un usuario
@@ -178,7 +177,7 @@ Abre tu navegador en: **http://localhost:3000**
 4. Agregar o eliminar favoritos
 ```
 
-#### 5️⃣ Administrar Usuarios
+#### 5️ Administrar Usuarios
 ```
 1. Ir a "Usuarios"
 2. Ver lista de usuarios
@@ -187,7 +186,7 @@ Abre tu navegador en: **http://localhost:3000**
 
 ---
 
-## 🏗️ Arquitectura
+##  Arquitectura
 
 ### Tecnologías
 - **Framework**: Next.js 16 (App Router)
@@ -266,23 +265,7 @@ types/
 
 ---
 
-## 🔒 Seguridad
-
-### ⚠️ Nota Importante
-Esta es una **implementación de demostración**. Para producción necesitas:
-
-1. ✅ Base de datos real (PostgreSQL/MongoDB)
-2. ✅ Hashing de contraseñas (bcrypt)
-3. ✅ JWT tokens con refresh
-4. ✅ HTTPS
-5. ✅ Validación en servidor
-6. ✅ Rate limiting
-7. ✅ CSRF protection
-8. ✅ XSS protection
-
----
-
-## 🎨 Personalización
+##  Personalización
 
 ### Cambiar Colores
 Edita `app/globals.css` para modificar los colores del tema.
@@ -294,7 +277,7 @@ Edita `app/globals.css` para modificar los colores del tema.
 
 ---
 
-## 📝 API Endpoints
+##  API Endpoints
 
 ### Autenticación
 - `POST /api/auth/login` - Iniciar sesión
@@ -324,7 +307,7 @@ Edita `app/globals.css` para modificar los colores del tema.
 
 ---
 
-## 🐛 Troubleshooting
+## Troubleshooting
 
 ### El reproductor no se ve
 - Verifica que estés en una página protegida
@@ -339,35 +322,12 @@ Edita `app/globals.css` para modificar los colores del tema.
 - Verifica que el servidor esté corriendo: `pnpm dev`
 - Revisa el puerto 3000 esté disponible
 
----
 
-## 🚀 Próximas Mejoras Sugeridas
 
-1. **Playlists**: Crear y gestionar listas de reproducción
-2. **Ratings**: Sistema de calificación de canciones
-3. **Compartir**: Compartir canciones/playlists
-4. **Upload**: Subir archivos de audio
-5. **Lyrics**: Mostrar letras de canciones
-6. **Social**: Seguir usuarios, comentarios
-7. **PWA**: Convertir en Progressive Web App
-8. **Notificaciones**: Push notifications
-9. **Analytics**: Estadísticas de reproducción
-10. **Recomendaciones**: Sugerir canciones
-
----
-
-## 📄 Licencia
-
-Este proyecto es una demostración educativa.
-
----
-
-## 👨‍💻 Soporte
+## Soporte
 
 Para más información, consulta:
-- `README.md` - Instrucciones de instalación
+- `README.md` - Uso e indicasiones
 - `AUTHENTICATION.md` - Detalles de autenticación
 
----
-
-**¡Disfruta tu aplicación de música!** 🎵
+--
