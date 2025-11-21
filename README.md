@@ -1,71 +1,373 @@
-# Frontend para el API de Música
+# 🎵 Guía Completa de la Aplicación - Música API Manager
 
-## Descripción
+## 📋 Índice
+1. [Inicio Rápido](#inicio-rápido)
+2. [Funcionalidades](#funcionalidades)
+3. [Uso de la Aplicación](#uso-de-la-aplicación)
+4. [Arquitectura](#arquitectura)
 
-En este taller generarás el frontend para el API de Música desarrollada en el lpa2-taller3 usando la herramienta [v0.app](https://v0.app/) y un *prompt* especializado.
+---
 
-## Prerrequisitos
+## 🚀 Inicio Rápido
 
-- API del lpa2-taller3 funcionando localmente
-- Node.js 18+ instalado
-- Cuenta en [v0.app](https://v0.app)
+### Iniciar el Servidor
+```bash
+cd /home/luisv/proyectos/lpa2-taller4
+pnpm dev
+```
 
-## Preparar la información de tu API
+### Acceder
+Abre tu navegador en: **http://localhost:3000**
 
-Antes de usar el *prompt*, recopila esta información de tu API de Música, para cada *endpoint*:
+### Primera Vez
+1. Serás redirigido a `/login`
+2. Ve a la pestaña "Registrarse"
+3. Crea una cuenta con:
+   - Nombre completo
+   - Email
+   - Contraseña (mín. 6 caracteres)
+4. Automáticamente iniciarás sesión
 
-```json
+---
+
+## ✨ Funcionalidades
+
+### 🔐 1. Autenticación y Autorización
+
+#### ✅ Características
+- **Login**: Iniciar sesión con email y contraseña
+- **Registro**: Crear nueva cuenta de usuario
+- **Logout**: Cerrar sesión de forma segura
+- **Persistencia**: La sesión se mantiene al recargar
+- **Protección**: Todas las páginas requieren autenticación
+- **Redirección**: Si no estás autenticado, te redirige a login
+
+#### 🎨 UI de Usuario
+- Avatar con iniciales en el sidebar
+- Nombre y email del usuario
+- Botón de cerrar sesión
+- Validaciones en tiempo real
+- Mensajes de error claros
+
+---
+
+### 🎵 2. Reproductor de Música
+
+#### ✅ Características
+- **Reproducción**: Play/Pause de canciones
+- **Navegación**: Siguiente/Anterior canción
+- **Progreso**: Barra de progreso interactiva
+- **Volumen**: Control deslizante de volumen
+- **Mute**: Botón de silenciar/reactivar
+- **Queue**: Sistema de cola de reproducción
+- **Fijo**: Reproductor fijo en la parte inferior
+
+#### 🎮 Cómo Usar
+1. Ve a **Canciones**
+2. Haz clic en el botón ▶️ de cualquier canción
+3. El reproductor aparece en la parte inferior
+4. Controla: play/pause, volumen, progreso
+5. La canción actual se muestra con su información
+
+---
+
+### 📊 3. Dashboard
+
+#### ✅ Estadísticas en Tiempo Real
+- **Total Usuarios**: Cantidad de usuarios registrados
+- **Total Canciones**: Canciones en la biblioteca
+- **Total Favoritos**: Marcadores de favoritos
+- **Actividad Reciente**: Últimas acciones
+
+---
+
+### 🎼 4. Gestión de Canciones
+
+#### ✅ Funcionalidades
+- **Listar**: Ver todas las canciones con paginación
+- **Crear**: Agregar nuevas canciones
+- **Editar**: Modificar información de canciones
+- **Eliminar**: Borrar canciones
+- **Buscar**: Buscar por título
+- **Reproducir**: Play directo desde la tabla
+
+#### 📝 Campos
+- Título (requerido)
+- Artista
+- Álbum
+- Duración (en segundos)
+- Año
+- Género
+- URL de audio
+
+---
+
+### 👥 5. Gestión de Usuarios
+
+#### ✅ Funcionalidades
+- **Listar**: Ver todos los usuarios
+- **Crear**: Agregar nuevos usuarios
+- **Editar**: Modificar información
+- **Eliminar**: Borrar usuarios
+- **Fecha de Registro**: Timestamp de creación
+
+#### 📝 Campos
+- Nombre completo (requerido)
+- Correo electrónico (requerido, único)
+
+---
+
+### ❤️ 6. Gestión de Favoritos
+
+#### ✅ Funcionalidades
+- **Ver por Usuario**: Seleccionar usuario y ver sus favoritos
+- **Agregar**: Marcar canciones como favoritas
+- **Eliminar**: Quitar de favoritos
+- **Detalles**: Ver información completa de cada canción favorita
+
+#### 🎯 Información Mostrada
+- Canción (título y artista)
+- Álbum
+- Duración
+- Fecha en que se marcó como favorito
+
+---
+
+### 🌓 7. Tema Claro/Oscuro
+
+#### ✅ Características
+- **Toggle**: Botón en el header del sidebar
+- **Persistencia**: Se guarda la preferencia
+- **Sistema**: Puede seguir el tema del sistema
+- **Transiciones**: Cambio suave entre temas
+
+---
+
+## 🎯 Uso de la Aplicación
+
+### Flujo Completo
+
+#### 1️⃣ Autenticación
+```
+1. Abrir http://localhost:3000
+2. Registrarse o iniciar sesión
+3. Ser redirigido al Dashboard
+```
+
+#### 2️⃣ Explorar Música
+```
+1. Ir a "Canciones"
+2. Ver la lista de canciones
+3. Buscar una canción específica
+4. Crear una nueva canción con "Nueva"
+```
+
+#### 3️⃣ Reproducir
+```
+1. Hacer clic en ▶️ en cualquier canción
+2. Ver el reproductor aparecer abajo
+3. Controlar la reproducción
+4. Ajustar volumen y progreso
+```
+
+#### 4️⃣ Gestionar Favoritos
+```
+1. Ir a "Favoritos"
+2. Seleccionar un usuario
+3. Ver sus canciones favoritas
+4. Agregar o eliminar favoritos
+```
+
+#### 5️⃣ Administrar Usuarios
+```
+1. Ir a "Usuarios"
+2. Ver lista de usuarios
+3. Crear, editar o eliminar usuarios
+```
+
+---
+
+## 🏗️ Arquitectura
+
+### Tecnologías
+- **Framework**: Next.js 16 (App Router)
+- **UI**: React 19 + TypeScript
+- **Estilos**: Tailwind CSS + Shadcn/ui
+- **Componentes**: Radix UI
+- **Estado**: Context API
+- **Temas**: next-themes
+- **Iconos**: Lucide React
+
+### Estructura de Carpetas
+```
+app/
+├── api/                 # API Routes
+│   ├── auth/           # Login, Register, Logout
+│   ├── canciones/      # CRUD Canciones
+│   ├── usuarios/       # CRUD Usuarios
+│   └── favoritos/      # CRUD Favoritos
+├── canciones/          # Página de canciones
+├── usuarios/           # Página de usuarios
+├── favoritos/          # Página de favoritos
+├── login/              # Página de login
+├── layout.tsx          # Layout principal
+└── page.tsx            # Dashboard
+
+components/
+├── auth/               # Componentes de auth
+│   ├── login-form.tsx
+│   └── protected-route.tsx
+├── layout/             # Sidebar
+├── player/             # Reproductor de audio
+├── songs/              # Tabla y diálogos de canciones
+├── users/              # Tabla y diálogos de usuarios
+├── favorites/          # Lista de favoritos
+├── dashboard/          # Estadísticas
+├── ui/                 # Componentes reutilizables
+└── theme-toggle.tsx    # Toggle de tema
+
+contexts/
+├── AuthContext.tsx           # Estado de autenticación
+└── AudioPlayerContext.tsx    # Estado del reproductor
+
+types/
+└── index.ts            # TypeScript types
+```
+
+### Contextos Globales
+
+#### AuthContext
+```typescript
 {
-  "endpoint": "http://localhost:3000/api/tu-endpoint",
-  "método": "GET/POST/PUT/DELETE",
-  "body_request": {"clave": "valor"},
-  "body_response": {"data": [], "message": "string"},
-  "errores": {"400": "Bad Request", "500": "Server Error"}
+  user: Usuario | null
+  isAuthenticated: boolean
+  isLoading: boolean
+  login: (email, password) => Promise<void>
+  register: (name, email, password) => Promise<void>
+  logout: () => void
 }
 ```
 
-## Usar el *Prompt* en v0.app
+#### AudioPlayerContext
+```typescript
+{
+  currentSong: Cancion | null
+  isPlaying: boolean
+  volume: number
+  currentTime: number
+  duration: number
+  playSong: (song) => void
+  togglePlay: () => void
+  setVolume: (volume) => void
+  seekTo: (time) => void
+  queue: Cancion[]
+}
+```
 
-1. Accede a [v0.app](https://v0.app)
-2. Copia y adapta el siguiente *prompt*:
+---
 
-    ---
-    
-    Eres un ingeniero de frontend senior especializado en React, TypeScript y Tailwind CSS. Tu tarea es diseñar interfaces web responsivas y eficientes que consuman APIs existentes.
+## 🔒 Seguridad
 
-    Crea un frontend web que interactúe con la siguiente API:  
+### ⚠️ Nota Importante
+Esta es una **implementación de demostración**. Para producción necesitas:
 
-    > pega el JSON con los detalles de tu API 
+1. ✅ Base de datos real (PostgreSQL/MongoDB)
+2. ✅ Hashing de contraseñas (bcrypt)
+3. ✅ JWT tokens con refresh
+4. ✅ HTTPS
+5. ✅ Validación en servidor
+6. ✅ Rate limiting
+7. ✅ CSRF protection
+8. ✅ XSS protection
 
-    Requisitos funcionales:  
+---
 
-    1. **Interfaz de usuario**:  
+## 🎨 Personalización
 
-        - [ESPECIFICA: Diseño esperado (ej: formulario de login, dashboard de datos, tabla editable)]  
-        - [ESPECIFICA: Estados de carga/éxito/error]  
-        - [ESPECIFICA: Comportamientos interactivos (ej: validación en tiempo real, paginación)]
+### Cambiar Colores
+Edita `app/globals.css` para modificar los colores del tema.
 
-    2. **Lógica de integración**:  
+### Agregar Rutas
+1. Crear página en `app/tu-ruta/page.tsx`
+2. Envolver con `<ProtectedRoute>` si requiere auth
+3. Agregar al sidebar en `components/layout/app-sidebar.tsx`
 
-        - Implementa manejo de errores robusto  
-        - Optimiza el rendimiento (ej: caching, lazy loading)  
-        - [ESPECIFICA: Validaciones de datos necesarias]
+---
 
-    ---
+## 📝 API Endpoints
 
-## Generar y Descargar el Código
+### Autenticación
+- `POST /api/auth/login` - Iniciar sesión
+- `POST /api/auth/register` - Registrarse
+- `POST /api/auth/logout` - Cerrar sesión
 
-1. Ejecuta el *prompt* en [v0.app](https://v0.app)
-2. Revisa el *preview* y realiza los ajustes necesarios
-3. Descarga el `ZIP` con la aplicación
-4. Ve al proyecto: `cd proyectos/lpa2-taller4`
-5. Descomprime el `ZIP` en este directorio
-6. Configurar Node v20: `curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -`
-7. Instalar Node/NPM: `sudo apt install nodejs -y`
-8. Instalar PNPM: `sudo npm install -g pnpm`
-9. Instalar las dependencias del proyecto: `pnpm install`
-10. Ejecutar en modo desarrollo: `pnpm dev`
-11. Abrir la aplicación en: [localhost:3000](http://localhost:3000/)
-12. Revisa y ajusta la configuración del API
-13. Para ejecutar en modo producción: `pnpm build` y luego: `pnpm start`
+### Canciones
+- `GET /api/canciones` - Listar todas
+- `GET /api/canciones/:id` - Ver una
+- `POST /api/canciones` - Crear
+- `PUT /api/canciones/:id` - Actualizar
+- `DELETE /api/canciones/:id` - Eliminar
+- `GET /api/canciones/buscar?titulo=...` - Buscar
 
+### Usuarios
+- `GET /api/usuarios` - Listar todos
+- `GET /api/usuarios/:id` - Ver uno
+- `POST /api/usuarios` - Crear
+- `PUT /api/usuarios/:id` - Actualizar
+- `DELETE /api/usuarios/:id` - Eliminar
+
+### Favoritos
+- `GET /api/favoritos` - Listar todos
+- `GET /api/favoritos/usuarios/:userId` - Por usuario
+- `POST /api/favoritos/usuarios/:userId/favoritos/:cancionId` - Agregar
+- `DELETE /api/favoritos/usuarios/:userId/favoritos/:cancionId` - Eliminar
+
+---
+
+## 🐛 Troubleshooting
+
+### El reproductor no se ve
+- Verifica que estés en una página protegida
+- Revisa la consola del navegador
+
+### No puedo iniciar sesión
+- Primero regístrate
+- Verifica que email y contraseña sean correctos
+- Revisa la consola del navegador
+
+### Las páginas no cargan
+- Verifica que el servidor esté corriendo: `pnpm dev`
+- Revisa el puerto 3000 esté disponible
+
+---
+
+## 🚀 Próximas Mejoras Sugeridas
+
+1. **Playlists**: Crear y gestionar listas de reproducción
+2. **Ratings**: Sistema de calificación de canciones
+3. **Compartir**: Compartir canciones/playlists
+4. **Upload**: Subir archivos de audio
+5. **Lyrics**: Mostrar letras de canciones
+6. **Social**: Seguir usuarios, comentarios
+7. **PWA**: Convertir en Progressive Web App
+8. **Notificaciones**: Push notifications
+9. **Analytics**: Estadísticas de reproducción
+10. **Recomendaciones**: Sugerir canciones
+
+---
+
+## 📄 Licencia
+
+Este proyecto es una demostración educativa.
+
+---
+
+## 👨‍💻 Soporte
+
+Para más información, consulta:
+- `README.md` - Instrucciones de instalación
+- `AUTHENTICATION.md` - Detalles de autenticación
+
+---
+
+**¡Disfruta tu aplicación de música!** 🎵
